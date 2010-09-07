@@ -8,6 +8,8 @@ rescue Bundler::BundlerError => e
 end
 
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../../lib')
-require 'linux_rpg'
 
-require 'spec/expectations'
+require 'linux_quest'
+
+require 'rspec/expectations'
+require 'aruba'

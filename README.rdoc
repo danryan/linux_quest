@@ -1,4 +1,4 @@
-= linux_rpg
+= linux_quest
 
 Description goes here.
 
@@ -15,3 +15,10 @@ Description goes here.
 == Copyright
 
 Copyright (c) 2010 Dan Ryan. See LICENSE for details.
+
+
+
+== Features
+
+* Player starts game
+* Player 
