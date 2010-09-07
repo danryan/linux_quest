@@ -43,8 +43,20 @@ RSpec::Core::RakeTask.new(:rcov) do |spec|
   spec.rcov = true
 end
 
-require 'cucumber/rake/task'
-Cucumber::Rake::Task.new(:features)
+require 'rspec/core/rake_task'
+
+namespace :spec do
+  desc "Run the code examples in spec/features"
+  Rspec::Core::RakeTask.new(:features) do |t|
+    t.pattern = "spec/features/**/*_feature.rb"
+  end
+  
+  task :statsetup do
+    require 'rails/code_statistics'
+    ::STATS_DIRECTORIES << %w(Features\ specs spec/features) if File.exist?('spec/features')
+    ::CodeStatistics::TEST_TYPES << "Features specs" if File.exist?('spec/features')
+  end
+end
 
 task :default => :spec
 
