@@ -20,7 +20,7 @@ GEM
     rspec-mocks (2.0.0.beta.20)
     steak (0.4.0.beta.1)
       rspec (>= 2.0.0.beta.9)
-    yard (0.6.0)
+    yard (0.6.1)
 
 PLATFORMS
   ruby
