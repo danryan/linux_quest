@@ -1,6 +1,6 @@
-= linux_quest
+* Global array of directory paths that specify what is possible to navigate
 
-Description goes here.
+
 
 == Note on Patches/Pull Requests
  
@@ -15,10 +15,3 @@ Description goes here.
 == Copyright
 
 Copyright (c) 2010 Dan Ryan. See LICENSE for details.
-
-
-
-== Features
-
-* Player starts game
-* Player 

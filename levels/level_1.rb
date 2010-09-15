@@ -1,0 +1,1 @@
+commands [ :ls, :cd, :pwd ]

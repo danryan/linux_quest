@@ -1,7 +1,20 @@
 #!/usr/bin/env ruby
 
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'linux_quest'
+$:.unshift(File.expand_path('../../lib', __FILE__))
 
-game = LinuxQuest::Game.new(STDOUT)
+require 'irb'
+require 'yaml'
+
+require File.join(File.dirname(__FILE__), '..', 'lib', 'linux_quest')
+require 'linux_quest/cli'
+
+
+game = LinuxQuest::Game.new
 game.start
+
+if ARGV.length > 1
+  print(instance_eval(ARGV[1..-1].join(' '))to_json)
+else
+  ARGV.clear
+  IRB.setup(nil)
+
